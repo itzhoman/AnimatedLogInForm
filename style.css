@@ -1,0 +1,140 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins' , sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container{
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow: hidden;
+}
+
+.left-panel{
+  background: linear-gradient(to right , #00c6ff , #0072ff);
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: white;
+}
+
+.left-panel .content{
+  text-align: center;
+}
+
+.left-panel h2{
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.left-panel p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.left-panel button{
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #0072ff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.left-panel button:hover{
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-10px);
+}
+
+.right-panel{
+  width: 50%;
+  position: relative;
+  transition: 0.6s ease;
+}
+
+.right-panel .login-form , .right-panel .signup-form{
+  position: absolute;
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.6s ease;
+}
+
+.right-panel .login-form{
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+.right-panel .signup-form{
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 0;
+}
+
+.right-panel h2{
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.right-panel input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.right-panel button{
+  width: 100%;
+  padding: 10px;
+  background-color: #0072ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.right-panel button:hover{
+  background-color: #005bb5;
+  transform: translateY(-10px);
+}
+
+
+.right-panel a{
+  color: #0072ff;
+  text-decoration: none;
+}
+
+.right-panel.active .login-form{
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 0;
+}
+
+.right-panel.active .signup-form{
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}
